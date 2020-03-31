@@ -436,7 +436,7 @@ a {
                 text-decoration:none;
             }
             .upcomming-video-list{
-                width: 70%;
+                width: 60%;
                 height: 330px;
                 position: absolute;
                 display:none;
@@ -447,7 +447,9 @@ a {
                 overflow: auto;
                 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
-                // border: 1px solid #fe5206;
+                @media (max-width:576px){
+                    width: 90%; 
+                }
                 ul{
                     li{
                         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);

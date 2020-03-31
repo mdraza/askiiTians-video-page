@@ -496,7 +496,7 @@ a:hover {
 }
 
 .tab_container .tab-content .upcomming-video .upcomming-video-list {
-  width: 70%;
+  width: 60%;
   height: 330px;
   position: absolute;
   display: none;
@@ -508,6 +508,12 @@ a:hover {
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .tab_container .tab-content .upcomming-video .upcomming-video-list {
+    width: 90%;
+  }
 }
 
 .tab_container .tab-content .upcomming-video .upcomming-video-list ul li {
