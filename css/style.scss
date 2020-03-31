@@ -219,6 +219,7 @@ a {
         }
 
         .video-container {
+            position: relative;
             margin-top: 40px;
             height: 200px;
             // padding: 20px;
@@ -226,6 +227,93 @@ a {
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
             position: relative;
             border-radius: 5px;
+            .video-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .video-play-button {
+                    position: absolute;
+                    z-index: 10;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    box-sizing: content-box;
+                    display: block;
+                    width: 32px;
+                    height: 44px;
+                    /* background: #fa183d; */
+                    border-radius: 50%;
+                    padding: 18px 20px 18px 28px;
+                }
+
+                .video-play-button:before {
+                    content: "";
+                    position: absolute;
+                    z-index: 0;
+                    left: 50%;
+                    top: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background: #f47408;
+                    border-radius: 50%;
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+
+                .video-play-button:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    left: 50%;
+                    top: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background: #f47408;
+                    border-radius: 50%;
+                    transition: all 200ms;
+                }
+
+                .video-play-button:hover:after {
+                    background-color: darken(#f47408, 10%);
+                }
+
+                .video-play-button img {
+                    position: relative;
+                    z-index: 3;
+                    max-width: 100%;
+                    width: auto;
+                    height: auto;
+                }
+
+                .video-play-button span {
+                    display: block;
+                    position: relative;
+                    z-index: 3;
+                    width: 0;
+                    height: 0;
+                    border-left: 32px solid #fff;
+                    border-top: 22px solid transparent;
+                    border-bottom: 22px solid transparent;
+                }
+
+                @keyframes pulse-border {
+                    0% {
+                        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+                        opacity: 1;
+                    }
+
+                    100% {
+                        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+                        opacity: 0;
+                    }
+                }
+
+            }
             img{
                 width: 100%;
                 height: 100%;
@@ -342,18 +430,18 @@ a {
                 margin-top: 15px;
                 text-transform: uppercase;
                 float: right;
-                color: #271303;
+                color: #fe5f0c;
                 font-weight: bolder;
                 font-size: 16px;
                 text-decoration:none;
             }
             .upcomming-video-list{
-                width: 32%;
-                height: 200px;
+                width: 70%;
+                height: 330px;
                 position: absolute;
                 display:none;
                 right: 0px;
-                bottom: 21px;
+                bottom: 30px;
                 padding: 15px;
                 background-color: #c1c1c1;
                 overflow: auto;
