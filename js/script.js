@@ -21,3 +21,18 @@ $('#show-less').click(function () {
   $('#show-more').show();
   $(this).hide();
 });
+
+$('#show-more-content2').hide();
+$('#show-less2').hide();
+
+$('#show-more').click(function () {
+  $('#show-more-content2').show();
+  $('#show-less2').show();
+  $(this).hide();
+});
+
+$('#show-less2').click(function () {
+  $('#show-more-content2').hide();
+  $('#show-more2').show();
+  $(this).hide();
+});
